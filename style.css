@@ -1,0 +1,114 @@
+.card{
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(40, 40, 40, 0.8);
+    backdrop-filter: blur(30px);
+    margin: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px rgba(0, 195, 255, 0.753);
+    position: relative;
+}
+body{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.vinil{
+    width: 200px;          /* tamanho da imagem */
+    height: 200px;         /* mantém quadrado */
+    position: absolute;
+    top: 30px;
+    right: -470px;
+    z-index: 2;
+    transform: rotate(20deg);
+    border-radius: 50%;    /* vira círculo */
+    object-fit: cover;     /* não deforma, corta o excesso */
+    display: block;        /* vira bloco */
+    margin: 1px 400px 100px;   /* centraliza + espaço embaixo mas é preciso ter definido o temnho pra o auto funcionar*/
+    padding: 80px;
+    background: radial-gradient(circle, #222 40%, #000 70%);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.6);
+    
+    background: repeating-radial-gradient(
+        circle,
+        #111 0px,
+        #111 3px,
+        #222 4px,
+        #111 6px
+    );
+
+    object-fit: cover;
+    
+}
+
+.vinil {
+    transition: transform 0.6s ease-out;
+}
+
+.title:hover ~ .vinil,
+.text:hover ~ .vinil,
+.contatos:hover ~ .vinil {
+    transform: rotate(360deg);
+}
+
+.title,
+.text,
+.contatos {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 50px;
+    margin-bottom: 10px;
+    color: rgb(143, 197, 197);
+    font-family: 'Courier New', Courier, monospace;
+    transition: 0.3s;
+}
+.title{
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
+    text-align: left;
+    padding-right: 270px;
+}
+.text{
+    margin-top: 100px;
+    text-align: left;
+}
+.contatos{
+    margin-top: 50px;
+    text-align: center
+}
+.title:hover,
+.text:hover,
+.contatos:hover{
+    transform: translateY(-5px);
+    box-shadow: rgba(16, 227, 255, 0.8);
+    text-shadow: 
+        0 0 5px #10e3ffcc,
+        0 0 10px #10e3ffcc,
+        0 0 20px #10e3ffcc;
+    box-shadow: 
+        0 0 5px #10e3ffcc,
+        0 0 10px #10e3ffcc,
+        0 0 20px #10e3ffcc;
+}
+
+
+.contatos a{
+    transition: 0.3s;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.contatos a:hover{
+    color: #bb71ff;
+    text-shadow: 
+        0 0 10px #bb71ff,
+        0 0 15px #bb71ff
+        0 0 35px #bb71ff;
+}
